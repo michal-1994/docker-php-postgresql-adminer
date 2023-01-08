@@ -1,6 +1,20 @@
 version: "3.8"
 
 services:
+  db:
+    image: postgres
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: user_password
+      POSTGRES_DB: db_name
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    ports:
+      - 8080:8080
   app:
     image: php:8.1-apache
     container_name: app
