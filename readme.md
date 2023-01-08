@@ -1,0 +1,1 @@
+## Docker php postgresql adminer
